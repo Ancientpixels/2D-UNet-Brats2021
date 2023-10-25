@@ -1,0 +1,195 @@
+Model: "model_2"
+__________________________________________________________________________________________________
+ Layer (type)                   Output Shape         Param #     Connected to                     
+==================================================================================================
+ input_3 (InputLayer)           [(None, 128, 128, 2  0           []                               
+                                )]                                                                
+                                                                                                  
+ conv2d_40 (Conv2D)             (None, 128, 128, 16  304         ['input_3[0][0]']                
+                                )                                                                 
+                                                                                                  
+ batch_normalization_36 (BatchN  (None, 128, 128, 16  64         ['conv2d_40[0][0]']              
+ ormalization)                  )                                                                 
+                                                                                                  
+ re_lu_36 (ReLU)                (None, 128, 128, 16  0           ['batch_normalization_36[0][0]'] 
+                                )                                                                 
+                                                                                                  
+ conv2d_41 (Conv2D)             (None, 128, 128, 32  4640        ['re_lu_36[0][0]']               
+                                )                                                                 
+                                                                                                  
+ batch_normalization_37 (BatchN  (None, 128, 128, 32  128        ['conv2d_41[0][0]']              
+ ormalization)                  )                                                                 
+                                                                                                  
+ re_lu_37 (ReLU)                (None, 128, 128, 32  0           ['batch_normalization_37[0][0]'] 
+                                )                                                                 
+                                                                                                  
+ max_pooling2d_8 (MaxPooling2D)  (None, 64, 64, 32)  0           ['re_lu_37[0][0]']               
+                                                                                                  
+ conv2d_42 (Conv2D)             (None, 64, 64, 32)   9248        ['max_pooling2d_8[0][0]']        
+                                                                                                  
+ batch_normalization_38 (BatchN  (None, 64, 64, 32)  128         ['conv2d_42[0][0]']              
+ ormalization)                                                                                    
+                                                                                                  
+ re_lu_38 (ReLU)                (None, 64, 64, 32)   0           ['batch_normalization_38[0][0]'] 
+                                                                                                  
+ conv2d_43 (Conv2D)             (None, 64, 64, 64)   18496       ['re_lu_38[0][0]']               
+                                                                                                  
+ batch_normalization_39 (BatchN  (None, 64, 64, 64)  256         ['conv2d_43[0][0]']              
+ ormalization)                                                                                    
+                                                                                                  
+ re_lu_39 (ReLU)                (None, 64, 64, 64)   0           ['batch_normalization_39[0][0]'] 
+                                                                                                  
+ max_pooling2d_9 (MaxPooling2D)  (None, 32, 32, 64)  0           ['re_lu_39[0][0]']               
+                                                                                                  
+ conv2d_44 (Conv2D)             (None, 32, 32, 64)   36928       ['max_pooling2d_9[0][0]']        
+                                                                                                  
+ batch_normalization_40 (BatchN  (None, 32, 32, 64)  256         ['conv2d_44[0][0]']              
+ ormalization)                                                                                    
+                                                                                                  
+ re_lu_40 (ReLU)                (None, 32, 32, 64)   0           ['batch_normalization_40[0][0]'] 
+                                                                                                  
+ conv2d_45 (Conv2D)             (None, 32, 32, 128)  73856       ['re_lu_40[0][0]']               
+                                                                                                  
+ batch_normalization_41 (BatchN  (None, 32, 32, 128)  512        ['conv2d_45[0][0]']              
+ ormalization)                                                                                    
+                                                                                                  
+ re_lu_41 (ReLU)                (None, 32, 32, 128)  0           ['batch_normalization_41[0][0]'] 
+                                                                                                  
+ max_pooling2d_10 (MaxPooling2D  (None, 16, 16, 128)  0          ['re_lu_41[0][0]']               
+ )                                                                                                
+                                                                                                  
+ conv2d_46 (Conv2D)             (None, 16, 16, 128)  147584      ['max_pooling2d_10[0][0]']       
+                                                                                                  
+ batch_normalization_42 (BatchN  (None, 16, 16, 128)  512        ['conv2d_46[0][0]']              
+ ormalization)                                                                                    
+                                                                                                  
+ re_lu_42 (ReLU)                (None, 16, 16, 128)  0           ['batch_normalization_42[0][0]'] 
+                                                                                                  
+ conv2d_47 (Conv2D)             (None, 16, 16, 256)  295168      ['re_lu_42[0][0]']               
+                                                                                                  
+ batch_normalization_43 (BatchN  (None, 16, 16, 256)  1024       ['conv2d_47[0][0]']              
+ ormalization)                                                                                    
+                                                                                                  
+ re_lu_43 (ReLU)                (None, 16, 16, 256)  0           ['batch_normalization_43[0][0]'] 
+                                                                                                  
+ max_pooling2d_11 (MaxPooling2D  (None, 8, 8, 256)   0           ['re_lu_43[0][0]']               
+ )                                                                                                
+                                                                                                  
+ conv2d_48 (Conv2D)             (None, 8, 8, 256)    590080      ['max_pooling2d_11[0][0]']       
+                                                                                                  
+ batch_normalization_44 (BatchN  (None, 8, 8, 256)   1024        ['conv2d_48[0][0]']              
+ ormalization)                                                                                    
+                                                                                                  
+ re_lu_44 (ReLU)                (None, 8, 8, 256)    0           ['batch_normalization_44[0][0]'] 
+                                                                                                  
+ conv2d_49 (Conv2D)             (None, 8, 8, 512)    1180160     ['re_lu_44[0][0]']               
+                                                                                                  
+ batch_normalization_45 (BatchN  (None, 8, 8, 512)   2048        ['conv2d_49[0][0]']              
+ ormalization)                                                                                    
+                                                                                                  
+ re_lu_45 (ReLU)                (None, 8, 8, 512)    0           ['batch_normalization_45[0][0]'] 
+                                                                                                  
+ conv2d_transpose_8 (Conv2DTran  (None, 16, 16, 256)  1179904    ['re_lu_45[0][0]']               
+ spose)                                                                                           
+                                                                                                  
+ cropping2d_8 (Cropping2D)      (None, 16, 16, 256)  0           ['re_lu_43[0][0]']               
+                                                                                                  
+ concatenate_8 (Concatenate)    (None, 16, 16, 512)  0           ['conv2d_transpose_8[0][0]',     
+                                                                  'cropping2d_8[0][0]']           
+                                                                                                  
+ conv2d_50 (Conv2D)             (None, 16, 16, 256)  1179904     ['concatenate_8[0][0]']          
+                                                                                                  
+ batch_normalization_46 (BatchN  (None, 16, 16, 256)  1024       ['conv2d_50[0][0]']              
+ ormalization)                                                                                    
+                                                                                                  
+ re_lu_46 (ReLU)                (None, 16, 16, 256)  0           ['batch_normalization_46[0][0]'] 
+                                                                                                  
+ conv2d_51 (Conv2D)             (None, 16, 16, 256)  590080      ['re_lu_46[0][0]']               
+                                                                                                  
+ batch_normalization_47 (BatchN  (None, 16, 16, 256)  1024       ['conv2d_51[0][0]']              
+ ormalization)                                                                                    
+                                                                                                  
+ re_lu_47 (ReLU)                (None, 16, 16, 256)  0           ['batch_normalization_47[0][0]'] 
+                                                                                                  
+ conv2d_transpose_9 (Conv2DTran  (None, 32, 32, 256)  590080     ['re_lu_47[0][0]']               
+ spose)                                                                                           
+                                                                                                  
+ cropping2d_9 (Cropping2D)      (None, 32, 32, 128)  0           ['re_lu_41[0][0]']               
+                                                                                                  
+ concatenate_9 (Concatenate)    (None, 32, 32, 384)  0           ['conv2d_transpose_9[0][0]',     
+                                                                  'cropping2d_9[0][0]']           
+                                                                                                  
+ conv2d_52 (Conv2D)             (None, 32, 32, 128)  442496      ['concatenate_9[0][0]']          
+                                                                                                  
+ batch_normalization_48 (BatchN  (None, 32, 32, 128)  512        ['conv2d_52[0][0]']              
+ ormalization)                                                                                    
+                                                                                                  
+ re_lu_48 (ReLU)                (None, 32, 32, 128)  0           ['batch_normalization_48[0][0]'] 
+                                                                                                  
+ conv2d_53 (Conv2D)             (None, 32, 32, 128)  147584      ['re_lu_48[0][0]']               
+                                                                                                  
+ batch_normalization_49 (BatchN  (None, 32, 32, 128)  512        ['conv2d_53[0][0]']              
+ ormalization)                                                                                    
+                                                                                                  
+ re_lu_49 (ReLU)                (None, 32, 32, 128)  0           ['batch_normalization_49[0][0]'] 
+                                                                                                  
+ conv2d_transpose_10 (Conv2DTra  (None, 64, 64, 128)  147584     ['re_lu_49[0][0]']               
+ nspose)                                                                                          
+                                                                                                  
+ cropping2d_10 (Cropping2D)     (None, 64, 64, 64)   0           ['re_lu_39[0][0]']               
+                                                                                                  
+ concatenate_10 (Concatenate)   (None, 64, 64, 192)  0           ['conv2d_transpose_10[0][0]',    
+                                                                  'cropping2d_10[0][0]']          
+                                                                                                  
+ conv2d_54 (Conv2D)             (None, 64, 64, 64)   110656      ['concatenate_10[0][0]']         
+                                                                                                  
+ batch_normalization_50 (BatchN  (None, 64, 64, 64)  256         ['conv2d_54[0][0]']              
+ ormalization)                                                                                    
+                                                                                                  
+ re_lu_50 (ReLU)                (None, 64, 64, 64)   0           ['batch_normalization_50[0][0]'] 
+                                                                                                  
+ conv2d_55 (Conv2D)             (None, 64, 64, 64)   36928       ['re_lu_50[0][0]']               
+                                                                                                  
+ batch_normalization_51 (BatchN  (None, 64, 64, 64)  256         ['conv2d_55[0][0]']              
+ ormalization)                                                                                    
+                                                                                                  
+ re_lu_51 (ReLU)                (None, 64, 64, 64)   0           ['batch_normalization_51[0][0]'] 
+                                                                                                  
+ conv2d_transpose_11 (Conv2DTra  (None, 128, 128, 64  36928      ['re_lu_51[0][0]']               
+ nspose)                        )                                                                 
+                                                                                                  
+ cropping2d_11 (Cropping2D)     (None, 128, 128, 32  0           ['re_lu_37[0][0]']               
+                                )                                                                 
+                                                                                                  
+ concatenate_11 (Concatenate)   (None, 128, 128, 96  0           ['conv2d_transpose_11[0][0]',    
+                                )                                 'cropping2d_11[0][0]']          
+                                                                                                  
+ conv2d_56 (Conv2D)             (None, 128, 128, 32  27680       ['concatenate_11[0][0]']         
+                                )                                                                 
+                                                                                                  
+ batch_normalization_52 (BatchN  (None, 128, 128, 32  128        ['conv2d_56[0][0]']              
+ ormalization)                  )                                                                 
+                                                                                                  
+ re_lu_52 (ReLU)                (None, 128, 128, 32  0           ['batch_normalization_52[0][0]'] 
+                                )                                                                 
+                                                                                                  
+ conv2d_57 (Conv2D)             (None, 128, 128, 32  9248        ['re_lu_52[0][0]']               
+                                )                                                                 
+                                                                                                  
+ batch_normalization_53 (BatchN  (None, 128, 128, 32  128        ['conv2d_57[0][0]']              
+ ormalization)                  )                                                                 
+                                                                                                  
+ re_lu_53 (ReLU)                (None, 128, 128, 32  0           ['batch_normalization_53[0][0]'] 
+                                )                                                                 
+                                                                                                  
+ conv2d_58 (Conv2D)             (None, 128, 128, 3)  867         ['re_lu_53[0][0]']               
+                                                                                                  
+ softmax_2 (Softmax)            (None, 128, 128, 3)  0           ['conv2d_58[0][0]']              
+                                                                                                  
+ conv2d_59 (Conv2D)             (None, 128, 128, 4)  16          ['softmax_2[0][0]']              
+                                                                                                  
+==================================================================================================
+Total params: 6,866,211
+Trainable params: 6,861,315
+Non-trainable params: 4,896
+__________________________________________________________________________________________________
